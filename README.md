@@ -9,16 +9,9 @@ Filephish is the original interface for fast and easy document and file discover
 
 ## 🗂️ Functionality
 Filephish supports individual or mixed searches for the following filetypes:
-
-##### PDF
-- pdf
-##### Documents
-- doc, docx, odt, ods, odp
-##### Spreadsheets
-- xls, xlsx, csv 
-##### Other text files
-- txt, rtf, xml
-##### Presentations
-- ppt, pptx, key
-##### File Archives
-- zip, rar, 7z
+-**PDF Files** .pdf
+-**Documents** .doc, .docx, .odt, .ods, .odp
+-**Spreadsheets** .xls, .xlsx, .csv 
+-**Other Text Files** .txt, .rtf, .xml
+-**Presentations** .ppt, .pptx, .key
+-**File Archives** .zip, .rar, .7z
