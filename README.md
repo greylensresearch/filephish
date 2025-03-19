@@ -1,13 +1,14 @@
-## **Filephish**
+## Filephish
 Filephish is the original interface for fast and easy document and file discovery on the internet. 
 - Conduct searches via Google, Bing, Yandex, Baidu, Sogu or DuckDuck Go
 - No excessive permissions or pop-ups required
 - Responsive and mobile-friendly layout
 
-#### Web view
-<img width="768" alt="Screenshot 2025-03-19 at 13 27 05" src="https://github.com/user-attachments/assets/c74352f9-e9d3-471d-a1d1-870ed08de31c" />
+## Usage 
+Filephish requires no installation and, as of 2025, zero pop-up permissions. 
+Simply navigate to the [site](https://greylenresearch.github.io/filephish/), enter the keyword(s) you wish to search for and select the desired search engine and file type(s).
 
-## 🗂️ Functionality
+## Functionality
 Filephish supports individual or mixed searches for the following filetypes:
 - **PDF Files** .pdf
 - **Documents** .doc, .docx, .odt, .ods, .odp
@@ -15,3 +16,6 @@ Filephish supports individual or mixed searches for the following filetypes:
 - **Other Text Files** .txt, .rtf, .xml
 - **Presentations** .ppt, .pptx, .key
 - **File Archives** .zip, .rar, .7z
+
+## Media References
+Filephish has been featured in [RecruiterHunt](https://recruiterhunt.com/resource/filephish/), [ZeroTrace](https://zerotrace.org/2024/11/osint-tools-how-easy-it-is-to-uncover-your-personal-data-online/), [SecuritySoup](https://security-soup.net/weekly-news-roundup-february-13-to-february-19/), [Dark Web Informer](https://darkwebinformer.com/dorks-collections-list-a-list-of-github-repositories-and-articles-with-list-of-dorks-for-different-search-engines/), [UK OSINT](https://www.uk-osint.net/2022updates.html) and [RTVE](https://www.rtve.es/noticias/20221221/investiga-verificartve-caja-herramientas-avanzada/2412478.shtml)
