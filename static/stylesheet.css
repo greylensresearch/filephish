@@ -56,6 +56,15 @@ p {
   margin: auto;
 }
 
+a {
+  color: #fff;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
 .form-control {
   background-color: #090a0e;
   border: 1px solid #22262c;
