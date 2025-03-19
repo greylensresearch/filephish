@@ -5,7 +5,7 @@ Filephish is the original interface for fast and easy document and file discover
 - Responsive and mobile-friendly layout
 
 ## Usage 
-Filephish requires no installation and, as of 2025, zero pop-up permissions. 
+Filephish requires no installation and, as of 2025, no additional pop-up permissions. 
 Simply navigate to the [site](https://greylenresearch.github.io/filephish/), enter the keyword(s) you wish to search for and select the desired search engine and file type(s).
 
 ## Functionality
@@ -18,4 +18,4 @@ Filephish supports individual or mixed searches for the following filetypes:
 - **File Archives** .zip, .rar, .7z
 
 ## Media References
-Filephish has been featured in [RecruiterHunt](https://recruiterhunt.com/resource/filephish/), [ZeroTrace](https://zerotrace.org/2024/11/osint-tools-how-easy-it-is-to-uncover-your-personal-data-online/), [SecuritySoup](https://security-soup.net/weekly-news-roundup-february-13-to-february-19/), [Dark Web Informer](https://darkwebinformer.com/dorks-collections-list-a-list-of-github-repositories-and-articles-with-list-of-dorks-for-different-search-engines/), [UK OSINT](https://www.uk-osint.net/2022updates.html) and [RTVE](https://www.rtve.es/noticias/20221221/investiga-verificartve-caja-herramientas-avanzada/2412478.shtml)
+Since its initial release in 2022, Filephish has been featured in [RecruiterHunt](https://recruiterhunt.com/resource/filephish/), [ZeroTrace](https://zerotrace.org/2024/11/osint-tools-how-easy-it-is-to-uncover-your-personal-data-online/), [SecuritySoup](https://security-soup.net/weekly-news-roundup-february-13-to-february-19/), [Dark Web Informer](https://darkwebinformer.com/dorks-collections-list-a-list-of-github-repositories-and-articles-with-list-of-dorks-for-different-search-engines/), [UK OSINT](https://www.uk-osint.net/2022updates.html) and [RTVE](https://www.rtve.es/noticias/20221221/investiga-verificartve-caja-herramientas-avanzada/2412478.shtml), as well as in numerous blogs and tutorials.
