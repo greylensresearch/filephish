@@ -3,6 +3,7 @@ Filephish is the original interface for fast and easy document and file discover
 - Conduct searches via Google, Bing, Yandex, Baidu, Sogu or DuckDuck Go
 - No excessive permissions or pop-ups required
 - Responsive and mobile-friendly layout
+<img width="768" alt="Screenshot 2025-03-19 at 13 27 05" src="https://github.com/user-attachments/assets/c74352f9-e9d3-471d-a1d1-870ed08de31c" />
 
 ## 🗂️ Functionality
 Filephish supports individual or mixed searches for the following filetypes:
