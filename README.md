@@ -1,21 +1,43 @@
-## Filephish
-Filephish is the original interface for fast and easy document and file discovery on the internet. 
-- Conduct searches via Google, Bing, Yandex, Baidu, Sogu or DuckDuck Go
-- No excessive permissions or pop-ups required
-- Responsive and mobile-friendly layout
+[Filephish](https://greylensresearch.github.io/filephish/) is a lightweight, user-friendly tool designed to help you quickly discover documents across the web. By combining keywords, site-specific searches, and file type filters, Filephish generates optimized search queries that help you find exactly the documents you need.
 
-## Usage 
-Filephish requires no installation and, as of 2025, no additional pop-up permissions. 
-Simply navigate to the [site](https://greylenresearch.github.io/filephish/), enter the keyword(s) you wish to search for and select the desired search engine and file type(s).
+## Features
 
-## Functionality
-Filephish supports individual or mixed searches for the following filetypes:
-- **PDF Files** .pdf
-- **Documents** .doc, .docx, .odt, .ods, .odp
-- **Spreadsheets** .xls, .xlsx, .csv 
-- **Other Text Files** .txt, .rtf, .xml
-- **Presentations** .ppt, .pptx, .key
-- **File Archives** .zip, .rar, .7z
+- **Simple keyword search**: Enter any term to begin your document search
+- **Site-specific searches**: Narrow results to a specific domain or website
+- **Multiple search engines**: Compatible with Google, Bing, Yandex, Baidu, Sogou, and DuckDuckGo
+- **File type filtering**: Quickly filter for specific document types:
+  - PDF files
+  - Documents (DOC, DOCX, ODT, ODS, ODP)
+  - Spreadsheets (XLS, XLSX, CSV)
+  - Presentations (PPT, PPTX, KEY)
+  - Plain text files (TXT, RTF, XML)
+  - Archives (ZIP, RAR, 7Z)
 
-## Media References
-Since its initial release in 2022, Filephish has been featured in [RecruiterHunt](https://recruiterhunt.com/resource/filephish/), [ZeroTrace](https://zerotrace.org/2024/11/osint-tools-how-easy-it-is-to-uncover-your-personal-data-online/), [SecuritySoup](https://security-soup.net/weekly-news-roundup-february-13-to-february-19/), [Dark Web Informer](https://darkwebinformer.com/dorks-collections-list-a-list-of-github-repositories-and-articles-with-list-of-dorks-for-different-search-engines/), [UK OSINT](https://www.uk-osint.net/2022updates.html) and [RTVE](https://www.rtve.es/noticias/20221221/investiga-verificartve-caja-herramientas-avanzada/2412478.shtml), as well as in numerous blogs and tutorials.
+## How It Works
+
+Filephish builds optimized search queries by combining your keywords with advanced search operators. When you click "Search", it automatically opens your chosen search engine with the properly formatted query.
+
+## Use Cases
+
+- **Research**: Find academic papers, technical documentation, or industry reports
+- **Competitive analysis**: Discover presentations and documents from specific companies
+- **Due diligence**: Locate financial statements and company information
+- **OSINT**: Identify potentially exposed documents on specific domains
+- **Data collection**: Find datasets and spreadsheets related to your research
+
+## Getting Started
+
+1. Enter a keyword related to the documents you want to find
+2. (Optional) Specify a site to limit your search to a particular domain
+3. Select your preferred search engine
+4. Check the boxes for the file types you're interested in
+5. Click "Search" to execute your query
+
+## Installation
+
+No installation required! Filephish runs entirely in your browser. Simply clone this repository and open `index.html` or visit the hosted version.
+
+```bash
+git clone https://github.com/yourusername/filephish.git
+cd filephish
+```
