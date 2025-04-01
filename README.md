@@ -8,12 +8,18 @@
 - **Site-specific searches**: Narrow results to a specific domain or website
 - **Multiple search engines**: Compatible with Google, Bing, Yandex, Baidu, Sogou, and DuckDuckGo
 - **File type filtering**: Quickly filter for specific document types:
-  - PDF files
-  - Documents (DOC, DOCX, ODT, ODS, ODP)
-  - Spreadsheets (XLS, XLSX, CSV)
-  - Presentations (PPT, PPTX, KEY)
-  - Plain text files (TXT, RTF, XML)
-  - Archives (ZIP, RAR, 7Z)
+  - Pdf files
+  - Documents (doc, docx, odt, ods, odp)
+  - Spreadsheets (xls, xlsx, csv)
+  - Presentations (ppt, pptx, key)
+  - Plain text files (txt, rtf, xml)
+  - Archives (zip, rar, gz, 7z)
+  - Password Files(pwd, passwd, shadow, htpasswd, wp-config, kdbx, cred, secrets, keychain, pfx)
+  - Login files (logon, auth, session, token, cookies, signin, cert, jwt, oauth)
+  - Database files (db, sql, sqlite, mdb, accdb, frm, ibd, myd, ndf, ora)
+  - Log files (log, csv, json, xml, audit, trace, debug, out, err)
+  - Configuration files (cfg, ini, conf, xml, json, yml, toml, env, cnf, properties)
+  - Backup files (bak, backup, tar, old, bkp, arc)
 
 ## How It Works
 
