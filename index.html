@@ -3,15 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-  <title>filephish</title>
+  <title>FilePhish</title>
+  <meta content="FilePhish" property="og:title">
+  <meta content="Filephish is a lightweight, user-friendly tool designed to help you quickly discover documents across the web by combining keywords, site-specific searches, and file type filters." name="description">
+  <meta content="Filephish is a lightweight, user-friendly tool designed to help you quickly discover documents across the web by combining keywords, site-specific searches, and file type filters." property="og:description">
+  <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+  <link rel="shortcut icon" href="static/favicon.ico">
   <link rel="icon" href="static/favicon.png">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Astloch:wght@400;700&family=Monoton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
 
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="static/stylesheet.css">
@@ -19,12 +24,14 @@
 
 <body>
   <div class="content">
-  <div class="container">
-    <h1>filephish</h1>
-    <h2>the original query builder for fast and easy document discovery</h2>
-
+    <!-- Main Container -->
+    
     <div class="container">
-      <div class="row">
+      <h1><img class="mb-4" src="static/logo.png" alt="This is a fish" width="80" height="80"> FilePhish</h1>
+      <h2 style="background: linear-gradient(266deg, #4a07c5 -5.71%, #b0a9ef 101.53%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">The original query builder for fast and easy document discovery</h2>
+      
+      <!-- Search Form -->
+      <div class="row mb-3">
         <div class="col-sm">
           <input type="text" aria-label="Keyword" class="form-control" placeholder="Keyword" id="searchKeyword">
         </div>
@@ -32,87 +39,122 @@
           <input type="text" aria-label="Site" class="form-control" placeholder="Site (optional)" id="searchSite">
         </div>
         <div class="col-sm">
-          <div class="input-group-prepend">
-            <select id="searchEngine" class="custom-select">
-              <option value="" disabled selected>Select Search Engine</option>
-              <option value="https://www.google.com/search?q=">Google</option>
-              <option value="https://www.bing.com/search?q=">Bing</option>
-              <option value="https://yandex.com/search/?text=">Yandex</option>
-              <option value="https://www.baidu.com/s?wd=">Baidu</option>
-              <option value="https://www.sogou.com/web?query=">Sogou</option>
-              <option value="https://duckduckgo.com/?q=">DuckDuckGo</option>
-            </select>
-          </div>
+          <select id="searchEngine" class="form-control">
+            <option value="" disabled selected>Select Search Engine</option>
+            <option value="https://www.google.com/search?q=">Google</option>
+            <option value="https://www.bing.com/search?q=">Bing</option>
+            <option value="https://yandex.com/search/?text=">Yandex</option>
+            <option value="https://www.baidu.com/s?wd=">Baidu</option>
+            <option value="https://www.sogou.com/web?query=">Sogou</option>
+            <option value="https://duckduckgo.com/?q=">DuckDuckGo</option>
+          </select>
         </div>
       </div>
   
-    <div class="container">
-      <div class="boxes">
-      <div class="row">
-        <div class="col-sm">
-          <label><input type="checkbox" class="checkbox" value="filetype:pdf">PDF Files</label>
+      <!-- File Type Checkboxes -->
+      <div class="boxes mb-3">
+        <div class="row">
+          <div class="col-sm">
+            <label><input type="checkbox" class="checkbox" value="filetype:pdf">PDF Files</label>
+          </div>
+          <div class="col-sm">
+            <label><input type="checkbox" class="checkbox" value="filetype:doc | filetype:docx | filetype:odt | filetype:ods | filetype:odp">Documents</label>
+          </div>
+          <div class="col-sm">
+            <label><input type="checkbox" class="checkbox" value="filetype:xls | filetype:xlsx | filetype:csv">Spreadsheets</label>
+          </div>
         </div>
-        <div class="col-sm">
-          <label><input type="checkbox" class="checkbox" value="filetype:doc | filetype:docx | filetype:odt | filetype:ods | filetype:odp">Documents</label>
-        </div>
-        <div class="col-sm">
-          <label><input type="checkbox" class="checkbox" value="filetype:xls | filetype:xlsx | filetype:csv">Spreadsheets</label>
+        
+        <div class="row">
+          <div class="col-sm">
+            <label><input type="checkbox" class="checkbox" value="filetype:txt | filetype:rtf | filetype:xml">Other Text Files</label>
+          </div>
+          <div class="col-sm">
+            <label><input type="checkbox" class="checkbox" value="filetype:ppt | filetype:pptx | filetype:key">Presentations</label>
+          </div>
+          <div class="col-sm">
+            <label><input type="checkbox" class="checkbox" value="filetype:zip | filetype:rar | filetype:7z | filetype:gz">File Archives</label> 
+          </div>
         </div>
       </div>
-      
-      <div class="row">
-        <div class="col-sm">
-          <label><input type="checkbox" class="checkbox" value="filetype:txt | filetype:rtf | filetype:xml">Other Text Files</label>
+
+      <!-- Search Button -->
+      <div class="mb-3">
+        <button class="btn" type="button" aria-label="Search" onclick="buildSearchUrl()">Search</button>
+      </div>
+
+      <!-- Collapsible Section -->
+      <div class="mb-3">
+        <button class="btn-collaps" type="button" style="width: 200px;" aria-label="Other file types" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        <b>↳</b> Other file types
+        </button>
+        
+        <div class="collapse" id="collapseExample">
+          <div class="boxes mt-3">
+            <div class="row">
+              <div class="col-sm">
+                <label><input type="checkbox" class="checkbox" value="filetype:pwd | filetype:passwd | filetype:shadow | filetype:htpasswd | filetype:wp-config | filetype:kdbx | filetype:cred | filetype:secrets | filetype:keychain | filetype:pfx">Password Files</label> 
               </div>
-        <div class="col-sm">
-          <label><input type="checkbox" class="checkbox" value="filetype:ppt | filetype:pptx | filetype:key">Presentations</label>
+              <div class="col-sm">
+                <label><input type="checkbox" class="checkbox" value="filetype:login | filetype:logon | filetype:auth | filetype:session | filetype:token | filetype:cookies | filetype:signin | filetype:cert | filetype:jwt | filetype:oauth">Login Files</label> 
+              </div>
+              <div class="col-sm">
+                <label><input type="checkbox" class="checkbox" value="filetype:db | filetype:sql | filetype:sqlite | filetype:mdb | filetype:accdb | filetype:frm | filetype:ibd | filetype:myd | filetype:ndf | filetype:ora">Database Files</label> 
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm">
+                <label><input type="checkbox" class="checkbox" value="filetype:log | filetype:csv | filetype:json | filetype:xml | filetype:audit | filetype:trace | filetype:debug | filetype:out | filetype:err">Log Files</label> 
+              </div>
+              <div class="col-sm">
+                <label><input type="checkbox" class="checkbox" value="filetype:cfg | filetype:ini | filetype:conf | filetype:xml | filetype:json | filetype:yml | filetype:toml | filetype:env | filetype:cnf | filetype:properties">Configuration Files</label> 
+              </div>
+              <div class="col-sm">
+                <label><input type="checkbox" class="checkbox" value="filetype:bak | filetype:backup | filetype:tar | filetype:old | filetype:bkp | filetype:arc">Backup Files</label> 
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-sm">
-          <label><input type="checkbox" class="checkbox" value="filetype:zip | filetype:rar | filetype:7z">File Archives</label> 
       </div>
-    </div>
-  </div>
-    <button class="btn" type="button" aria-label="Search" onclick="buildSearchUrl()">Search</button>
-    
+
+      <!-- Footer -->
+      <div class="mt-4">
+        Developed by <a href="https://greylens.com" style="color: #4a07c5;" target="_blank">Greylens</a>
       </div>
     </div>
   </div>
 
-<script>
+  <script>
     function buildSearchUrl() {
-
-    const searchKeyword = document.getElementById("searchKeyword").value.trim();
-    const searchSite = document.getElementById("searchSite").value.trim();
-    
-    if (!searchKeyword) {
-        alert("Please enter a keyword to search.");
-        return;
+      const searchKeyword = document.getElementById("searchKeyword").value.trim();
+      const searchSite = document.getElementById("searchSite").value.trim();
+      
+      if (!searchKeyword) {
+          alert("Please enter a keyword to search.");
+          return;
+      }
+      
+      const searchEngine = document.getElementById("searchEngine").value;
+      
+      if (!searchEngine) {
+          alert("Please select a search engine.");
+          return;
+      }
+      
+      const checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
+      const selectedValues = Array.from(checkboxes).map(checkbox => checkbox.value);
+      
+      const filetypeQuery = selectedValues.length ? selectedValues.join(" | ") : "";
+      
+      // Conditionally add site: parameter only if searchSite is not empty
+      const siteQuery = searchSite ? `site:${searchSite}` : "";
+      
+      const fullQuery = `"${searchKeyword}" ${siteQuery} ${filetypeQuery}`.trim();
+      
+      const url = `${searchEngine}${encodeURIComponent(fullQuery)}`;
+      
+      window.open(url, '_blank');
     }
-    
-    const searchEngine = document.getElementById("searchEngine").value;
-    
-    if (!searchEngine) {
-        alert("Please select a search engine.");
-        return;
-    }
-    
-    const checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
-    const selectedValues = Array.from(checkboxes).map(checkbox => checkbox.value);
-    
-    const filetypeQuery = selectedValues.length ? selectedValues.join(" | ") : "";
-    
-    // Conditionally add site: parameter only if searchSite is not empty
-    const siteQuery = searchSite ? `site:${searchSite}` : "";
-    
-    const fullQuery = `"${searchKeyword}" ${siteQuery} ${filetypeQuery}`.trim();
-    
-    const url = `${searchEngine}${encodeURIComponent(fullQuery)}`;
-    
-    window.open(url, '_blank');
-}
   </script>
-   <div class="container">
-    Developed by <a href="https://greylens.com">Greylens</a>
-  </div>
 </body>
 </html>
