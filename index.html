@@ -20,6 +20,138 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="static/stylesheet.css">
+  
+  <style>
+    /* Dark Mode Styles */
+    body.dark-mode {
+      background-color: #000000;
+      color: #e0e0e0;
+    }
+    
+    body.dark-mode .container {
+      background-color: #000000;
+    }
+    
+    body.dark-mode h2 {
+      color: #e0e0e0;
+    }
+    
+    body.dark-mode p, body.dark-mode a {
+      color: #e0e0e0;
+    }
+    
+    body.dark-mode .form-control, 
+    body.dark-mode #searchEngine {
+      background-color: #000000;
+      border: 1px solid #8000ff;
+      color: #e0e0e0;
+    }
+    
+    body.dark-mode .form-control:focus,
+    body.dark-mode #searchEngine:focus {
+      border-color: #8000ff;
+      background-color: #000000;
+    }
+    
+    body.dark-mode .btn-collaps {
+      background-color: transparent;
+      color: #a67dff;
+    }
+    
+    body.dark-mode .btn-collaps:hover,
+    body.dark-mode .btn-collaps:active,
+    body.dark-mode .btn-collaps:focus {
+      background-color: transparent;
+      color: #a67dff;
+    }
+    
+    body.dark-mode .col-sm {
+      color: #b0b0b0;
+    }
+    
+    body.dark-mode input[type="checkbox"] {
+      background-color: #000000;
+      border: 1px solid #8000ff;
+    }
+    
+    /* Dark mode toggle switch styles */
+    .dark-mode-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-bottom: 15px;
+    }
+    
+    .dark-mode-toggle label {
+      margin: 0 10px 0 0;
+      cursor: pointer;
+    }
+    
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+    
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 24px;
+    }
+    
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    
+    input:checked + .slider {
+      background-color: #8000ff;
+    }
+    
+    input:focus + .slider {
+      box-shadow: 0 0 1px #8000ff;
+    }
+    
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+    
+    .moon-icon, .sun-icon {
+      position: absolute;
+      top: 4px;
+      font-size: 16px;
+      transition: opacity 0.3s ease;
+    }
+    
+    
+    input:checked + .slider .moon-icon {
+      opacity: 1;
+    }
+    
+    input:checked + .slider .sun-icon {
+      opacity: 0;
+    }
+  </style>
 </head>
 
 <body>
@@ -120,6 +252,15 @@
       <!-- Footer -->
       <div class="mt-4">
         Developed by <a href="https://greylens.com" style="color: #4a07c5;" target="_blank">Greylens</a>
+         <!-- Dark Mode Toggle --> 
+      </div>
+      <div class="mt-4">
+      <label for="darkModeToggle">Dark Mode</label>
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider">
+        </span>
+      </label>
       </div>
     </div>
   </div>
@@ -142,7 +283,9 @@
       }
       
       const checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
-      const selectedValues = Array.from(checkboxes).map(checkbox => checkbox.value);
+      const selectedValues = Array.from(checkboxes)
+        .filter(checkbox => checkbox.id !== 'darkModeToggle')
+        .map(checkbox => checkbox.value);
       
       const filetypeQuery = selectedValues.length ? selectedValues.join(" | ") : "";
       
@@ -155,6 +298,31 @@
       
       window.open(url, '_blank');
     }
+    
+    // Dark mode toggle functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const darkModeToggle = document.getElementById('darkModeToggle');
+      
+      // Check for saved theme preference or respect OS preference
+      const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+      const savedTheme = localStorage.getItem('theme');
+      
+      if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
+        document.body.classList.add('dark-mode');
+        darkModeToggle.checked = true;
+      }
+      
+      // Listen for toggle changes
+      darkModeToggle.addEventListener('change', function() {
+        if (this.checked) {
+          document.body.classList.add('dark-mode');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          document.body.classList.remove('dark-mode');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    });
   </script>
 </body>
 </html>
